@@ -1,0 +1,4 @@
+{
+  "requirement": "The app should support both dark and light mode themes for user customization. \n\nScreens:\nTheme toggle settings on the User Dashboard and Admin Panel. \n\nPersonas:\nUsers who prefer personalized app appearances based on lighting conditions or personal preference.",
+  "title": "Dark and Light Themes"
+}

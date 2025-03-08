@@ -1,0 +1,4 @@
+{
+  "requirement": "Ensure that only authenticated admins can log in and access admin pages. \n\nScreens:\nLogin page with admin-specific authentication filtering. \n\nPersonas:\nAdmins managing the platform's operational elements.",
+  "title": "Admin Login Security"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "Create an admin panel allowing administrators to manage car listings via CRUD operations, review and approve user posts for car advertisements, and manage test drive requests from users with clear approval or rejection functionality.",
+  "title": "Admin Role Management"
+}

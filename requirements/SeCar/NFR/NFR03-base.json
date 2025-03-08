@@ -1,0 +1,4 @@
+{
+  "requirement": "The system must support horizontal and vertical scaling to handle an increasing number of users and transactions.",
+  "title": "Scalable Infrastructure"
+}

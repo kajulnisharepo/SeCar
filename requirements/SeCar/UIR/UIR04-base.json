@@ -1,0 +1,4 @@
+{
+  "requirement": "The admin panel must include an interface for CRUD operations on car listings, with edit and delete functionalities displayed clearly for efficiency.",
+  "title": "Manage Car Listings UI"
+}

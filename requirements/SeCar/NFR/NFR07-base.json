@@ -1,0 +1,4 @@
+{
+  "requirement": "Admin-related functionalities must be accessible only to authenticated and authorized admin users.",
+  "title": "Restricted Admin Access"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "Enable admins to review, approve, or reject ad post requests from users. \n\nScreens:\nAdmin Panel with ad review and decision screens. \n\nPersonas:\nAdmins moderating user-submitted car ad content to maintain quality.",
+  "title": "Admin Ad Approval"
+}

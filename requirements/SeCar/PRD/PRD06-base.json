@@ -1,0 +1,4 @@
+{
+  "requirement": "Allow users to submit requests to post free car ads, which require admin approval. \n\nScreens:\nUser Dashboard with an Ad Post Request page. \n\nPersonas:\nUsers looking to sell their cars by posting ads on the platform.",
+  "title": "User Ad Post Requests"
+}

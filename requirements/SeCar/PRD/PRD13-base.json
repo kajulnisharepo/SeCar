@@ -1,0 +1,4 @@
+{
+  "requirement": "Display a summary of completed orders for users after a purchase is made. \n\nScreens:\nOrder Confirmation page and Order History section. \n\nPersonas:\nUsers wanting a record of their transaction history for future reference.",
+  "title": "Order Management"
+}

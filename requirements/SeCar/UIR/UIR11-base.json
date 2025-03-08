@@ -1,0 +1,4 @@
+{
+  "requirement": "Users must be able to add cars to a cart and proceed to purchase using a 'Buy Now' button, with secure checkout and order confirmation screens.",
+  "title": "Cart and Order UI"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "Display a history of recently viewed cars to help users revisit previously explored options. \n\nScreens:\nRecently Viewed Cars section on the User Dashboard. \n\nPersonas:\nUsers retracing cars they have looked at for comparative purposes.",
+  "title": "Recently Viewed Cars"
+}

@@ -1,0 +1,4 @@
+{
+  "requirement": "Admins can review, approve, or reject user-submitted test drive requests. \n\nScreens:\nAdmin Panel with a Test Drive Request Management screen. \n\nPersonas:\nAdmins ensuring that test drive requests meet necessary conditions before approval.",
+  "title": "Admin Test Drive Approvals"
+}

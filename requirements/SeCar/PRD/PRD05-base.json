@@ -1,0 +1,4 @@
+{
+  "requirement": "Admins should be able to create, read, update, and delete car listings within the platform. \n\nScreens:\nAdmin Panel with CRUD functionality for car listings. \n\nPersonas:\nAdmin aiming to manage car listing information effectively.",
+  "title": "Car CRUD Management"
+}

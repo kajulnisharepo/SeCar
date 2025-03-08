@@ -5,54 +5,55 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SeCar;
+using SeCarApi.DAL.Context;
+using SeCarApi.DAL.Entity;
 using SeCarApi.Models;
 
 namespace SeCarApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TodoItemsController : ControllerBase
+    public class DemoController : ControllerBase
     {
-        private readonly TodoContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public TodoItemsController(TodoContext context)
+        public DemoController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/TodoItems
+        // GET: api/Demo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<Demo>>> GetDemoModel()
         {
-            return await _context.TodoItems.ToListAsync();
+            return await _context.DemoModels.ToListAsync();
         }
 
-        // GET: api/TodoItems/5
+        // GET: api/Demo/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
+        public async Task<ActionResult<Demo>> GetDemoModel(long id)
         {
-            var todoItem = await _context.TodoItems.FindAsync(id);
+            var demoModel = await _context.DemoModels.FindAsync(id);
 
-            if (todoItem == null)
+            if (demoModel == null)
             {
                 return NotFound();
             }
 
-            return todoItem;
+            return demoModel;
         }
 
-        // PUT: api/TodoItems/5
+        // PUT: api/Demo/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
+        public async Task<IActionResult> PutDemoModel(long id, Demo demoModel)
         {
-            if (id != todoItem.Id)
+            if (id != demoModel.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(todoItem).State = EntityState.Modified;
+            _context.Entry(demoModel).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +61,7 @@ namespace SeCarApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TodoItemExists(id))
+                if (!DemoModelExists(id))
                 {
                     return NotFound();
                 }
@@ -73,37 +74,36 @@ namespace SeCarApi.Controllers
             return NoContent();
         }
 
-        // POST: api/TodoItems
+        // POST: api/Demo
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
+        public async Task<ActionResult<DemoModel>> PostDemoModel(Demo demoModel)
         {
-            _context.TodoItems.Add(todoItem);
+            _context.DemoModels.Add(demoModel);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
-            return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+            return CreatedAtAction(nameof(GetDemoModel), new { id = demoModel.Id }, demoModel);
         }
 
-        // DELETE: api/TodoItems/5
+        // DELETE: api/Demo/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
+        public async Task<IActionResult> DeleteDemoModel(long id)
         {
-            var todoItem = await _context.TodoItems.FindAsync(id);
-            if (todoItem == null)
+            var demoModel = await _context.DemoModels.FindAsync(id);
+            if (demoModel == null)
             {
                 return NotFound();
             }
 
-            _context.TodoItems.Remove(todoItem);
+            _context.DemoModels.Remove(demoModel);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool TodoItemExists(long id)
+        private bool DemoModelExists(long id)
         {
-            return _context.TodoItems.Any(e => e.Id == id);
+            return _context.DemoModels.Any(e => e.Id == id);
         }
     }
 }
